@@ -1,6 +1,9 @@
 import * as React from "react";
 import { Landing } from "@/components/Landing";
 import styles from "@/styles/Home.module.scss";
+import Image from "next/image";
+import DashboardPic from "../../public/assets/projects/dashboard.png";
+import { projects } from "@/utils";
 
 export default function Home() {
   return (
@@ -23,6 +26,43 @@ export default function Home() {
             </a>
             . I hope you enjoy them!
           </p>
+        </section>
+
+        <section className={styles.showcase}>
+          {projects.map((project) => {
+            return (
+              <div className={styles.showcaseItem} key={project.title}>
+                <a
+                  href={project.projectLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.imageLink}
+                >
+                  <Image src={project.imageSrc} alt={project.title} />
+                </a>
+                <div className={styles.itemContent}>
+                  <a
+                    href={project.projectLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.title}
+                  </a>
+                  <div className={styles.links}>
+                    <a href={project.githubLink} className="primary-link-btn">
+                      Github
+                    </a>
+                    <a href={project.projectLink} className="primary-link-btn">
+                      Live
+                    </a>
+                    <a href={project.feMentorLink} className="primary-link-btn">
+                      FE Mentor
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </section>
       </main>
     </React.Fragment>
