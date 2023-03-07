@@ -5,7 +5,7 @@
   width: 160%;
   position: absolute;
   left: -50px;
-  top: -2%;
+  top: 0;
   box-shadow: 0 0 20px 20px rgba(8, 0, 18, 1);
 }
 
@@ -14,18 +14,25 @@
   min-height: 20rem;
   color: var(--colors-white);
   padding-top: 8rem;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 0, 18, 1) 0%,
+    var(--colors-background) 10%,
+    var(--colors-background) 100%
+  );
 
   .sectionTitle {
-    margin: 2rem 3rem 4rem 3rem;
+    margin: 5rem 3rem 7rem 3rem;
 
     h3.title {
-      font-size: $text-3xl;
+      font-size: $text-4xl;
       @extend .font-bold;
     }
 
     p.description {
-      font-size: $text-lg;
-      @extend .font-normal;
+      font-size: $text-xl;
+      @extend .font-thin;
+      letter-spacing: 0.5px;
       margin-bottom: 2rem;
 
       a {
