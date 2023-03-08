@@ -25,7 +25,7 @@ const Landing = () => {
       <div className={styles.landingTextContainer}>
         <h1>
           <span>FRONTEND MENTOR</span>
-          <span>SOLUTION SHOWCASE</span>
+          <span>SOLUTIONS SHOWCASE</span>
         </h1>
         <h2>By Milton Chung</h2>
       </div>

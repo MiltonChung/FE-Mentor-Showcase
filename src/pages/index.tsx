@@ -23,7 +23,12 @@ export default function Home() {
             >
               Frontend Mentor
             </a>
-            . Each project has three links: Github, Live, and Frontend Mentor
+            . The goal of Frontend Mentor challenges is to replicate the given
+            design as close as possible.
+          </p>
+
+          <p className={styles.description}>
+            Each project has three links: Github, Live, and Frontend Mentor
             solutions page. I documented every project I did on each of the
             project Github links. I share what the design looks like, challenges
             I faced, what I learned, and time spent on each project. Note that I
@@ -44,15 +49,20 @@ export default function Home() {
                   className={styles.imageLink}
                 >
                   <Image src={project.imageSrc} alt={project.title} />
+                  <div className={styles.overlay} />
                 </a>
                 <div className={styles.itemContent}>
-                  <a
-                    href={project.projectLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {project.title}
-                  </a>
+                  <div className={styles.contentText}>
+                    <a
+                      href={project.projectLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.title}
+                    </a>
+                    <p>Completed on: {project.dateCompleted}</p>
+                  </div>
+
                   <div className={styles.links}>
                     <a
                       href={project.githubLink}

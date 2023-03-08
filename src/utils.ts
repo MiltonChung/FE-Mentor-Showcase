@@ -85,7 +85,7 @@ export const projects = [
     githubLink:
       "https://github.com/MiltonChung/FrontendMenterChallenge/tree/master/HuddleFullPageCurved",
     feMentorLink:
-      "https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H",
+      "https://www.frontendmentor.io/solutions/huddle-landing-page-with-curved-sections-6ULGQJBWM",
     dateCompleted: "December 2020",
   },
   {
@@ -113,7 +113,8 @@ export const projects = [
   {
     title: "Project Tracking Component",
     imageSrc: ProjectTrackingComponent,
-    projectLink: "https://social-media-dashboard-ten.vercel.app/",
+    projectLink:
+      "https://miltonchung.github.io/FrontendMenterChallenge/ProjectTrackingComponent/index.html",
     githubLink:
       "https://github.com/MiltonChung/FrontendMenterChallenge/tree/master/ProjectTrackingComponent",
     feMentorLink:
@@ -157,7 +158,7 @@ export const projects = [
     title: "Huddle Landing Page",
     imageSrc: HuddleLandingPage,
     projectLink:
-      "https://miltonchung.github.io/FrontendMenterChallenge/HuddleLandingPage/index.html/",
+      "https://miltonchung.github.io/FrontendMenterChallenge/HuddleLandingPage/index.html",
     githubLink:
       "https://github.com/MiltonChung/FrontendMenterChallenge/tree/master/HuddleLandingPage",
     feMentorLink:
