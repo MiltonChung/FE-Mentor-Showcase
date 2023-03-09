@@ -2,12 +2,18 @@ import * as React from "react";
 import styles from "@/styles/Landing.module.scss";
 import Image from "next/image";
 import LandingImg from "../../public/assets/landing2.jpg";
+import { DoubleDownArrowsIcon } from "@/Icons";
 
 const Landing = () => {
   return (
     <header className={styles.header}>
       <div className={styles.overlay} />
-      <Image className={styles.landingImg} src={LandingImg} alt="landing" />
+      <Image
+        className={styles.landingImg}
+        src={LandingImg}
+        alt="landing"
+        priority
+      />
 
       <nav>
         <a
@@ -29,6 +35,10 @@ const Landing = () => {
         </h1>
         <h2>By Milton Chung</h2>
       </div>
+
+      <a href="#main" className={styles.scrollNext}>
+        <DoubleDownArrowsIcon />
+      </a>
     </header>
   );
 };

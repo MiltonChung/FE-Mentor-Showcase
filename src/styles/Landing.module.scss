@@ -58,8 +58,6 @@
       }
 
       &:hover {
-        color: var(--colors-primary);
-
         span.initials {
           transform: translateX(80px);
         }
@@ -144,6 +142,41 @@
         font-size: 35px;
         line-height: 39px;
       }
+    }
+  }
+
+  .scrollNext {
+    position: absolute;
+    bottom: 2rem;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 2;
+
+    // animate up and down on hover
+    &:hover {
+      animation: bounce 1.25s infinite;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translate(-50%, 0);
+      }
+      80% {
+        transform: translate(-50%, -7px);
+      }
+      100% {
+        transform: translate(-50%, 0);
+      }
+    }
+
+    svg path {
+      fill: var(--colors-primary-variant);
     }
   }
 }

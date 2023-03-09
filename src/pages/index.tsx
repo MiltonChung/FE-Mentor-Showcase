@@ -9,7 +9,7 @@ export default function Home() {
     <React.Fragment>
       <Landing />
 
-      <main className={styles.main}>
+      <main className={styles.main} id="main">
         <div className={styles.transitionBlur} />
 
         <section className={styles.sectionTitle}>

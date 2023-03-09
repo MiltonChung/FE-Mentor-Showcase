@@ -1,8 +1,8 @@
 :root {
   --screen-2xs: 370px;
-  --screen-xs: 480px;
   --screen-sm: 600px;
   --screen-base: 768px;
+  --screen-xs: 480px;
   --screen-md: 900px;
   --screen-lg: 1024px;
   --screen-xl: 1200px;
@@ -17,4 +17,8 @@ html {
   font-size: 16px;
   @extend %font-lato;
   background: var(--colors-background);
+}
+
+body {
+  scroll-behavior: smooth;
 }
