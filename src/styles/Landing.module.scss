@@ -1,3 +1,35 @@
+@keyframes pan-image {
+  0% {
+    background-position: 25% 42%;
+    background-size: 200%;
+  }
+
+  33% {
+    background-position: 25% 55%;
+    background-size: 200%;
+  }
+
+  33.0001% {
+    background-position: 70% 20%;
+    background-size: 200%;
+  }
+
+  66% {
+    background-position: 55% 40%;
+    background-size: 200%;
+  }
+
+  66.0001% {
+    background-position: 45% 60%;
+    background-size: 250%;
+  }
+
+  100% {
+    background-position: 5% 60%;
+    background-size: 250%;
+  }
+}
+
 .header {
   position: relative;
   color: var(--colors-white);
@@ -11,7 +43,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.45);
     z-index: -1;
   }
 
@@ -21,9 +53,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
     z-index: -2;
+    background-image: url("../../public/assets/landing1.jpg");
+    background-size: 300%;
+    background-position: 0% 0%;
+    opacity: 0.6;
+    animation: pan-image 10s linear infinite;
+
+    @media (max-width: 768px) {
+      animation: pan-image 17s linear infinite;
+      background-image: url("../../public/assets/landing2.jpg");
+    }
   }
 
   nav {

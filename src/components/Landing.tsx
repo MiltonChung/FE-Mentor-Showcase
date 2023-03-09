@@ -8,12 +8,14 @@ const Landing = () => {
   return (
     <header className={styles.header}>
       <div className={styles.overlay} />
-      <Image
+      {/* <Image
         className={styles.landingImg}
         src={LandingImg}
         alt="landing"
         priority
-      />
+      /> */}
+
+      <div className={styles.landingImg} />
 
       <nav>
         <a
