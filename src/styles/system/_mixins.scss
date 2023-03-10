@@ -11,6 +11,12 @@
   transition: color $duration ease-in-out;
   position: relative;
   @extend .font-medium;
+  background: none;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  letter-spacing: 0.05rem;
 
   &::before,
   &::after {
@@ -58,5 +64,41 @@
     &::after {
       transition-delay: 0s, $duration, 0s;
     }
+  }
+
+  &:focus {
+    outline: 2px dotted var(--colors-white);
+  }
+}
+
+@mixin btn-hover-underline($initialColor, $hoverColor) {
+  text-decoration: none;
+  color: $initialColor;
+  @extend .font-bold;
+  display: inline-block;
+  position: relative;
+  transition: color 0.2s ease-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background: $initialColor;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover::after {
+    background: $hoverColor;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  &:hover {
+    color: $hoverColor;
   }
 }

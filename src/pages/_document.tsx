@@ -10,6 +10,9 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
           rel="stylesheet"
         />
+        {/* TODO: update canonical url */}
+        <link rel="canonical" href="https://miltonchung.com" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <body>

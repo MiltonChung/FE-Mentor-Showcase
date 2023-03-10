@@ -20,9 +20,8 @@ import SocialProofSection from "../public/assets/projects/social_proof.png";
 import ArticlePreviewComponent from "../public/assets/projects/article_preview.png";
 import SignUpComponent from "../public/assets/projects/sign_up.png";
 import HuddleLandingPage from "../public/assets/projects/Huddle_landing.png";
+import { GithubIcon, LinkedinIcon } from "./Icons";
 
-// TODO: tinypng images
-// TODO: delay loading of images until they are in view
 export const projects = [
   {
     title: "Social Media Dashboard",
@@ -263,5 +262,18 @@ export const projects = [
     feMentorLink:
       "https://www.frontendmentor.io/solutions/article-preview-component-IA07Vl6Rj",
     dateCompleted: "September 2020",
+  },
+];
+
+export const footerSocials = [
+  {
+    link: "https://github.com/miltonchung",
+    logo: GithubIcon,
+    title: "Github",
+  },
+  {
+    link: "https://www.linkedin.com/in/miltonchung",
+    logo: LinkedinIcon,
+    title: "LinkedIn",
   },
 ];

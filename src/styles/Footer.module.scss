@@ -1,0 +1,97 @@
+.footer {
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.8rem;
+  text-align: center;
+
+  button.scrollToTop {
+    width: 100%;
+    background: #272727;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    height: 3.5rem;
+
+    span {
+      position: relative;
+      color: var(--colors-white);
+      font-size: $text-base;
+      transition: all 0.3s;
+      transition-delay: 0.2s;
+      @extend .font-medium;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      background: var(--colors-secondary);
+      transition: height 0.3s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      height: 0;
+      width: 100%;
+    }
+
+    &:hover {
+      span {
+        color: var(--colors-background);
+      }
+
+      &:before {
+        height: 3.5rem;
+      }
+    }
+  }
+
+  .socialContainer {
+    display: flex;
+    margin: 2rem 0 1rem 0;
+
+    .socialLink {
+      background: #363636;
+      padding: 0.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child {
+        margin-right: 1rem;
+      }
+
+      &:hover svg {
+        color: var(--colors-secondary);
+      }
+
+      svg {
+        transition: all 0.3s;
+        color: var(--colors-white);
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+  .creditContainer {
+    color: var(--colors-white);
+    @extend .font-thin;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+
+    small {
+      margin-bottom: 0.4rem;
+    }
+
+    a {
+      @extend .font-medium;
+      @include btn-hover-underline(var(--colors-white), var(--colors-primary));
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { Landing } from "@/components/Landing";
 import styles from "@/styles/Home.module.scss";
 import Image from "next/image";
 import { projects } from "@/utils";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <main className={styles.main} id="main">
         <div className={styles.transitionBlur} />
 
-        <section className={styles.sectionTitle}>
+        <section className={styles.sectionTitle} aria-label="site-description">
           <h3 className={styles.title}>Welcome to my solution showcase!</h3>
           <p className={styles.description}>
             This is a collection of my solutions to the challenges on{" "}
@@ -38,7 +39,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className={styles.showcase}>
+        <section className={styles.showcase} aria-label="projects">
           {projects.map((project) => {
             return (
               <div className={styles.showcaseItem} key={project.title}>
@@ -46,6 +47,8 @@ export default function Home() {
                   href={project.projectLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  // accessibility
+                  aria-label={`Go to ${project.title} project site`}
                   className={styles.imageLink}
                 >
                   <Image src={project.imageSrc} alt={project.title} />
@@ -95,6 +98,24 @@ export default function Home() {
           })}
         </section>
       </main>
+
+      <h3 className={styles.closing}>
+        Thanks for scrolling this far. <br />
+        Hope you enjoyed! 😎
+      </h3>
+
+      <h3 className={styles.closing}>
+        You can visit me at{" "}
+        <a
+          href="http://miltonchung.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          my personal website.
+        </a>
+      </h3>
+
+      <Footer />
     </React.Fragment>
   );
 }

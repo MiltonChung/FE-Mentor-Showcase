@@ -4,29 +4,31 @@
     background-size: 200%;
   }
 
-  33% {
+  20% {
     background-position: 25% 55%;
     background-size: 200%;
   }
 
-  33.0001% {
-    background-position: 70% 20%;
+  50% {
+    background-position: 50% 20%;
     background-size: 200%;
+    background-image: url("../../public/assets/landing3.jpg");
   }
 
-  66% {
-    background-position: 55% 40%;
-    background-size: 200%;
+  80% {
+    background-position: 45% 40%;
+    background-size: 250%;
+    background-image: url("../../public/assets/landing4.jpg");
   }
 
-  66.0001% {
-    background-position: 45% 60%;
+  92% {
+    background-position: 35% 50%;
     background-size: 250%;
   }
 
   100% {
-    background-position: 5% 60%;
-    background-size: 250%;
+    background-position: 25% 42%;
+    background-size: 200%;
   }
 }
 
@@ -59,11 +61,11 @@
     background-size: 300%;
     background-position: 0% 0%;
     opacity: 0.6;
-    animation: pan-image 10s linear infinite;
+    animation: pan-image 20s linear infinite;
 
     @media (max-width: 768px) {
-      animation: pan-image 17s linear infinite;
-      background-image: url("../../public/assets/landing2.jpg");
+      animation: pan-image 16s linear infinite;
+      background-image: url("../../public/assets/landing4.jpg");
     }
   }
 
@@ -167,7 +169,7 @@
 
       h2 {
         position: absolute;
-        bottom: 5%;
+        bottom: 15%;
       }
     }
 
@@ -188,7 +190,7 @@
 
   .scrollNext {
     position: absolute;
-    bottom: 2rem;
+    bottom: 5rem;
     width: 50px;
     height: 50px;
     left: 50%;
@@ -199,7 +201,6 @@
     outline: none;
     z-index: 2;
 
-    // animate up and down on hover
     &:hover {
       animation: bounce 1.25s infinite;
     }
