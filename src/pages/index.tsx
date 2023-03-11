@@ -1,16 +1,18 @@
-import * as React from "react";
-import { Landing } from "@/components/Landing";
-import styles from "@/styles/Home.module.scss";
 import Image from "next/image";
+import * as React from "react";
 import { projects } from "@/utils";
 import { Footer } from "@/components/Footer";
+import { Landing } from "@/components/Landing";
+import styles from "@/styles/Home.module.scss";
 
 export default function Home() {
-  return (
-    <React.Fragment>
-      <Landing />
+  const mainRef = React.useRef<HTMLDivElement>(null);
 
-      <main className={styles.main} id="main">
+  return (
+    <>
+      <Landing mainRef={mainRef} />
+
+      <main className={styles.main} id="main" ref={mainRef}>
         <div className={styles.transitionBlur} />
 
         <section className={styles.sectionTitle} aria-label="site-description">
@@ -116,6 +118,6 @@ export default function Home() {
       </h3>
 
       <Footer />
-    </React.Fragment>
+    </>
   );
 }

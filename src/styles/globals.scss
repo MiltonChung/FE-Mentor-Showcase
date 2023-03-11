@@ -17,8 +17,5 @@ html {
   font-size: 16px;
   @extend %font-lato;
   background: var(--colors-background);
-}
-
-body {
   scroll-behavior: smooth;
 }
