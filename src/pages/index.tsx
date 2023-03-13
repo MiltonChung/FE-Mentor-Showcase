@@ -49,7 +49,6 @@ export default function Home() {
                   href={project.projectLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  // accessibility
                   aria-label={`Go to ${project.title} project site`}
                   className={styles.imageLink}
                 >

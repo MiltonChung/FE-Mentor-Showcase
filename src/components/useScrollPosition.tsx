@@ -5,15 +5,21 @@ const useScrollPosition = () => {
 
   React.useEffect(() => {
     const updatePosition = () => {
+      if (
+        Math.abs(window.pageYOffset - scrollPosition) < 35 &&
+        window.pageYOffset > 100
+      )
+        return;
+
       setScrollPosition(window.pageYOffset);
     };
 
     if (typeof window !== "undefined") {
-      window.addEventListener("scroll", updatePosition, false);
+      window.addEventListener("scroll", updatePosition, { passive: false });
 
       return () => window.removeEventListener("scroll", updatePosition);
     }
-  }, []);
+  }, [scrollPosition]);
 
   return scrollPosition;
 };
