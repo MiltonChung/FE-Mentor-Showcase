@@ -2,6 +2,7 @@ import * as React from "react";
 import { DoubleDownArrowsIcon } from "@/Icons";
 import styles from "@/styles/Landing.module.scss";
 import { useScrollPosition } from "./useScrollPosition";
+import { AnimatedWord } from "./AnimatedWord";
 
 type LandingProps = {
   mainRef: React.RefObject<HTMLDivElement>;
@@ -46,100 +47,41 @@ const Landing: React.FC<LandingProps> = ({ mainRef }) => {
         <h1>
           <div className={styles.firstLine}>
             <div className={styles.textWord}>
-              {frontend.map((letter, index) => {
-                const xPos = index * 20 * (scrollPosition / 1000); // adjust this value to change the horizontal position of each letter
-                const yPos = scrollPosition / 2; // adjust this value to change the speed of the letter's movement
-                const angle =
-                  (Math.random() * 360 - 180) * (scrollPosition / 1000);
-
-                return (
-                  <div
-                    style={{
-                      transform: `translate(${xPos}px, ${yPos}px) rotate(${
-                        scrollPosition / 5
-                      }deg) rotateZ(${angle}deg)`, // add a random rotation around the Z-axis to give each letter a random direction
-                      opacity: 1 - scrollPosition / (index + 1) / 500, // adjust this value to change the opacity of the letter
-                    }}
-                    key={index + letter}
-                    className={styles.landingText}
-                  >
-                    {letter}
-                  </div>
-                );
-              })}
+              <AnimatedWord
+                word={frontend}
+                scrollPosition={scrollPosition}
+                xPosition={200 * (scrollPosition / 500)}
+                yPosition={scrollPosition * -0.7}
+              />
             </div>
 
             <div className={styles.textWord}>
-              {mentor.map((letter, index) => {
-                const xPos = index * 20 * (scrollPosition / 1000); // adjust this value to change the horizontal position of each letter
-                const yPos = scrollPosition / 2; // adjust this value to change the speed of the letter's movement
-                const angle =
-                  (Math.random() * 360 - 180) * (scrollPosition / 1000);
-
-                return (
-                  <div
-                    style={{
-                      transform: `translate(${xPos}px, ${yPos}px) rotate(${
-                        scrollPosition / 5
-                      }deg) rotateZ(${angle}deg)`, // add a random rotation around the Z-axis to give each letter a random direction
-                      opacity: 1 - scrollPosition / (index + 1) / 500, // adjust this value to change the opacity of the letter
-                    }}
-                    key={index + letter}
-                    className={styles.landingText}
-                  >
-                    {letter}
-                  </div>
-                );
-              })}
+              <AnimatedWord
+                word={mentor}
+                scrollPosition={scrollPosition}
+                xPosition={scrollPosition * 2}
+                yPosition={-scrollPosition / 2}
+              />
             </div>
           </div>
 
           <div className={styles.secondLine}>
             <div className={styles.textWord}>
-              {solutions.map((letter, index) => {
-                const xPos = index * 20 * (scrollPosition / 1000); // adjust this value to change the horizontal position of each letter
-                const yPos = scrollPosition / 2; // adjust this value to change the speed of the letter's movement
-                const angle =
-                  (Math.random() * 360 - 180) * (scrollPosition / 1000);
-
-                return (
-                  <div
-                    style={{
-                      transform: `translate(${xPos}px, ${yPos}px) rotate(${
-                        scrollPosition / 5
-                      }deg) rotateZ(${angle}deg)`, // add a random rotation around the Z-axis to give each letter a random direction
-                      opacity: 1 - scrollPosition / (index + 1) / 500, // adjust this value to change the opacity of the letter
-                    }}
-                    key={index + letter}
-                    className={styles.landingText}
-                  >
-                    {letter}
-                  </div>
-                );
-              })}
+              <AnimatedWord
+                word={solutions}
+                scrollPosition={scrollPosition}
+                xPosition={-30 * (scrollPosition / 600)}
+                yPosition={scrollPosition / 2}
+              />
             </div>
-            <div className={styles.textWord}>
-              {showcase.map((letter, index) => {
-                const xPos = index * 20 * (scrollPosition / 1000); // adjust this value to change the horizontal position of each letter
-                const yPos = scrollPosition / 2; // adjust this value to change the speed of the letter's movement
-                const angle =
-                  (Math.random() * 360 - 180) * (scrollPosition / 1000);
 
-                return (
-                  <div
-                    style={{
-                      transform: `translate(${xPos}px, ${-yPos}px) rotate(${
-                        scrollPosition / 5
-                      }deg) rotateZ(${angle}deg)`, // add a random rotation around the Z-axis to give each letter a random direction
-                      opacity: 1 - scrollPosition / (index + 1) / 500, // adjust this value to change the opacity of the letter
-                    }}
-                    key={index + letter}
-                    className={styles.landingText}
-                  >
-                    {letter}
-                  </div>
-                );
-              })}
+            <div className={styles.textWord}>
+              <AnimatedWord
+                word={showcase}
+                scrollPosition={scrollPosition}
+                xPosition={200 * (scrollPosition / 500)}
+                yPosition={scrollPosition * 0.7}
+              />
             </div>
           </div>
         </h1>
