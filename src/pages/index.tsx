@@ -4,9 +4,12 @@ import { projects } from "@/utils";
 import { Footer } from "@/components/Footer";
 import { Landing } from "@/components/Landing";
 import styles from "@/styles/Home.module.scss";
+import useOnScreen from "@/components/useOnScreen";
 
 export default function Home() {
   const mainRef = React.useRef<HTMLDivElement>(null);
+  const sectionTitleRef = React.useRef<HTMLDivElement>(null);
+  const isVisible = useOnScreen(sectionTitleRef);
 
   return (
     <>
@@ -15,7 +18,11 @@ export default function Home() {
       <main className={styles.main} id="main" ref={mainRef}>
         <div className={styles.transitionBlur} />
 
-        <section className={styles.sectionTitle} aria-label="site-description">
+        <section
+          ref={sectionTitleRef}
+          className={`${styles.sectionTitle} ${isVisible ? "fade-in" : ""}`}
+          aria-label="site-description"
+        >
           <h3 className={styles.title}>Welcome to my solution showcase!</h3>
           <p className={styles.description}>
             This is a collection of my solutions to the challenges on{" "}

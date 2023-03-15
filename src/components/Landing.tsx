@@ -18,10 +18,12 @@ const Landing: React.FC<LandingProps> = ({ mainRef }) => {
 
   const scrollToMain = () => {
     if (mainRef.current) {
-      mainRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      setTimeout(() => {
+        mainRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 90);
     }
   };
 

@@ -7,7 +7,7 @@ const useScrollPosition = () => {
     const updatePosition = () => {
       if (
         Math.abs(window.pageYOffset - scrollPosition) < 35 &&
-        window.pageYOffset > 100
+        window.pageYOffset > 200
       )
         return;
 

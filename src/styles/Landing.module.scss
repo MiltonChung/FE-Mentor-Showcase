@@ -122,8 +122,8 @@
   }
 
   .landingTextContainer {
-    margin: 2rem;
-    height: 80%;
+    margin: 1rem 2rem;
+    height: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,7 +140,9 @@
       }
 
       div {
-        transition: transform 0.25s ease-in-out, color 0.1s ease-in-out;
+        transition: transform 0.25s ease-in-out, color 0.25s ease-in-out,
+          opacity 0.25s ease-in-out;
+        transition-delay: 0.03s;
       }
     }
 
@@ -161,6 +163,8 @@
     }
 
     @media (min-width: 768px) {
+      height: 69.69%;
+
       h1 {
         font-size: 60px;
         line-height: 66px;
@@ -205,7 +209,7 @@
 
   .scrollNext {
     position: absolute;
-    bottom: 5rem;
+    bottom: 6rem;
     width: 50px;
     height: 50px;
     left: 50%;
@@ -233,7 +237,11 @@
     }
 
     svg path {
-      fill: var(--colors-primary-variant);
+      fill: var(--colors-primary);
+    }
+
+    @media (max-width: 768px) {
+      bottom: 10rem;
     }
   }
 }

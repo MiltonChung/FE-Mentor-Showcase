@@ -19,3 +19,25 @@ html {
   background: var(--colors-background);
   scroll-behavior: smooth;
 }
+
+.fade-in {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 0.85s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  visibility: visible;
+  animation-play-state: running;
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
