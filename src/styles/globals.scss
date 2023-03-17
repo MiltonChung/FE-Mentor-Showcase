@@ -32,12 +32,12 @@ html {
 
 @keyframes fade-in {
   from {
-    transform: translateY(50px);
+    transform: translateX(-50px);
     opacity: 0;
   }
 
   to {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }

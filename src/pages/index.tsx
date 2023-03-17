@@ -9,7 +9,7 @@ import useOnScreen from "@/components/useOnScreen";
 export default function Home() {
   const mainRef = React.useRef<HTMLDivElement>(null);
   const sectionTitleRef = React.useRef<HTMLDivElement>(null);
-  const isVisible = useOnScreen(sectionTitleRef);
+  const isVisible = useOnScreen(sectionTitleRef, "100px");
 
   return (
     <>
