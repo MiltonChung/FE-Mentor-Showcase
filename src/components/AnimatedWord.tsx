@@ -1,4 +1,5 @@
 import * as React from "react";
+import styles from "@/styles/Landing.module.scss";
 
 type AnimatedWordProps = {
   word: string[];
@@ -19,7 +20,7 @@ const AnimatedWord: React.FC<AnimatedWordProps> = ({
     <>
       {word.map((letter, index) => {
         return (
-          <div
+          <h1
             style={{
               color: `rgba(${255 - (scrollPosition / 10) * Math.random()}, ${
                 255 - (scrollPosition / 3) * Math.random()
@@ -31,10 +32,11 @@ const AnimatedWord: React.FC<AnimatedWordProps> = ({
               }deg) rotateZ(${rotationAngle}deg)`,
               opacity: 1 - scrollPosition / (index + 1) / 500,
             }}
+            className={styles.letter}
             key={index + letter}
           >
             {letter}
-          </div>
+          </h1>
         );
       })}
     </>

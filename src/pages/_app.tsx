@@ -1,7 +1,6 @@
 import Head from "next/head";
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
-import { Footer } from "@/components/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,7 +11,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta property="og:image" content="./og_preview.png" />
-
         <meta property="og:image:type" content="image/jpg" />
         <meta property="og:image:width" content="1650" />
         <meta property="og:image:height" content="871" />
@@ -21,8 +19,10 @@ export default function App({ Component, pageProps }: AppProps) {
           content="Milton Chung's Frontend Mentor solutions showcase."
         />
         <meta property="og:type" content="website" />
-        {/* TODO: update link */}
-        <meta property="og:url" content="https://miltonchung.com/" />
+        <meta
+          property="og:url"
+          content="https://fementorshowcase.netlify.app/"
+        />
         <meta
           property="og:title"
           content="Frontend Mentor Solutions Showcase | Milton Chung"

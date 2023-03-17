@@ -20,9 +20,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.fade-in {
+%fade-in {
   opacity: 0;
-  animation-name: fade-in;
   animation-duration: 0.85s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
@@ -30,7 +29,12 @@ html {
   animation-play-state: running;
 }
 
-@keyframes fade-in {
+.fade-in-from-left {
+  @extend %fade-in;
+  animation-name: fade-in-from-left;
+}
+
+@keyframes fade-in-from-left {
   from {
     transform: translateX(-50px);
     opacity: 0;
@@ -38,6 +42,57 @@ html {
 
   to {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-from-right {
+  @extend %fade-in;
+  animation-name: fade-in-from-right;
+}
+
+@keyframes fade-in-from-right {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-from-bottom {
+  @extend %fade-in;
+  animation-name: fade-in-from-bottom;
+}
+
+@keyframes fade-in-from-bottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-from-top {
+  @extend %fade-in;
+  animation-name: fade-in-from-top;
+}
+
+@keyframes fade-in-from-top {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }

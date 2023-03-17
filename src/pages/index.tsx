@@ -20,7 +20,9 @@ export default function Home() {
 
         <section
           ref={sectionTitleRef}
-          className={`${styles.sectionTitle} ${isVisible ? "fade-in" : ""}`}
+          className={`${styles.sectionTitle} ${
+            isVisible ? "fade-in-from-left" : ""
+          }`}
           aria-label="site-description"
         >
           <h3 className={styles.title}>Welcome to my solution showcase!</h3>
@@ -105,23 +107,23 @@ export default function Home() {
             );
           })}
         </section>
+
+        <h3 className={styles.closing}>
+          Thanks for scrolling this far. <br />
+          Hope you enjoyed! 😎
+        </h3>
+
+        <h3 className={styles.closing}>
+          You can visit me at{" "}
+          <a
+            href="http://miltonchung.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            my personal website.
+          </a>
+        </h3>
       </main>
-
-      <h3 className={styles.closing}>
-        Thanks for scrolling this far. <br />
-        Hope you enjoyed! 😎
-      </h3>
-
-      <h3 className={styles.closing}>
-        You can visit me at{" "}
-        <a
-          href="http://miltonchung.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          my personal website.
-        </a>
-      </h3>
 
       <Footer />
     </>

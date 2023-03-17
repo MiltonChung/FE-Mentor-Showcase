@@ -49,7 +49,7 @@ const Landing: React.FC<LandingProps> = ({ mainRef }) => {
         {scrollPosition > 1400 ? (
           <h1>FRONTEND MENTOR SOLUTIONS SHOWCASE</h1>
         ) : (
-          <h1>
+          <div className="fade-in-from-top">
             <div className={styles.firstLine}>
               <div className={styles.textWord}>
                 <AnimatedWord
@@ -89,13 +89,14 @@ const Landing: React.FC<LandingProps> = ({ mainRef }) => {
                 />
               </div>
             </div>
-          </h1>
+          </div>
         )}
 
-        <h2>By Milton Chung</h2>
+        <h2 className="fade-in-from-bottom">By Milton Chung</h2>
       </div>
 
       <button
+        type="button"
         onClick={scrollToMain}
         className={styles.scrollNext}
         aria-label="scroll to main section"

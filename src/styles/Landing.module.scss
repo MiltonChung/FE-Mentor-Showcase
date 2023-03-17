@@ -139,10 +139,10 @@
         margin-right: 0.75rem;
       }
 
-      div {
-        transition: transform 0.25s ease-in-out, color 0.25s ease-in-out,
-          opacity 0.25s ease-in-out;
-        transition-delay: 0.09s;
+      h1.letter {
+        transition: transform 0.13s ease-in-out, color 0.13s ease-in-out,
+          opacity 0.13s ease-in-out;
+        transition-delay: 0.01s;
       }
     }
 
@@ -150,7 +150,6 @@
       font-size: $text-3xl;
       @extend .font-normal;
       line-height: 38.5px;
-      margin-bottom: 2rem;
       text-align: left;
       display: flex;
       flex-direction: column;
@@ -158,6 +157,7 @@
 
     h2 {
       font-size: $text-xl;
+      margin-top: 2rem;
       @extend .font-normal;
       text-align: left;
     }
@@ -183,7 +183,6 @@
       h1 {
         font-size: 80px;
         line-height: 88px;
-        margin-top: -2rem;
       }
 
       h2 {
