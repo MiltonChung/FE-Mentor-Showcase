@@ -15,3 +15,5 @@ On the website, each project has three links: Github, Live, and Frontend Mentor 
 ## Inpiration
 
 I wanted to update the home of all my solutions so I created this website. I will be updating this page as I complete more challenges. This new solutions showcase was created in March 2023 with the theme/goal of being big and bold. I also added some animations to make it more interesting (a way to practice my CSS skills and animations).
+
+You can still find my old showcase website here: https://miltonchung.github.io/FrontendMenterChallenge/
